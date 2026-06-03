@@ -1,0 +1,182 @@
+Data root exists: True
+Data root: /Users/rpeter01/Library/CloudStorage/OneDrive-SyracuseUniversity/Ryan Syracuse University Classwork/Pro_Ag/pro_ag_comp/ProAg_data
+
+============================================================
+§1  DATA INVENTORY & QUALITY ASSESSMENT
+============================================================
+Discovered 29 Track 1 CSV files, 59.9 MB total
+                          File   Rows  Cols  Size_MB               Date Range NaN %                          All-NaN Cols
+           Beef Production.csv    986     4     0.04 2007-01-06 to 2025-12-06  0.0%                                  None
+           Carcass Weights.csv  12380     9     1.27 2001-08-06 to 2025-12-09 16.6%                                  None
+               Cash Cattle.csv 133140     7    11.66 2019-11-13 to 2025-12-09  0.0%                                  None
+      Cattle Primal Values.csv  56411     9     6.07 2001-04-03 to 2025-12-09  2.2%                                  None
+               Cow Harvest.csv   4556    13     0.80 2023-01-01 to 2025-11-16  9.2%                                  None
+    Cutout (Select_Choice).csv  11136    10     0.80 2004-01-05 to 2025-12-09 19.9%                                 trend
+              EndPointList.csv  84488    11     7.30                           0.9%                                  None
+                Fed Cattle.csv   1185     5     0.06 2007-12-31 to 2025-12-08  0.0%                                  None
+            Harvest - USDA.csv   6190    12     0.71 2001-08-06 to 2025-12-09  0.0%                                  None
+                 Harvest 2.csv   1238    11     0.24 2024-01-01 to 2025-12-09  0.0%                                  None
+                 Harvest 3.csv   6747    23     1.26 2024-01-01 to 2025-12-09 22.0%                                  None
+        Historical Harvest.csv   3067    13     0.42 2024-01-01 to 2025-11-17 28.3%                                  None
+                    IASWMN.csv   1582     6     0.13 2019-09-23 to 2025-12-09  2.0%                                  None
+                   Indexes.csv  12380    17     2.58 2001-08-06 to 2025-12-09  5.9%                                  None
+Isowean Cash Market Volume.csv   2755    37     1.10 2020-09-28 to 2025-12-01  1.5%                                  None
+        LRP Quotes Futures.csv     72     6     0.00 1970-01-01 to 1970-01-01  0.0%                                  None
+                LRP Quotes.csv    372    46     0.11 2026-03-16 to 2026-12-14  4.5% unitPrice, farmerRancherIndicatorCode
+       National SOW Prices.csv  26817    14     3.47 2020-12-07 to 2025-12-10 18.4%                                  None
+                  National.csv   1582     6     0.13 2019-09-23 to 2025-12-09  0.2%                                  None
+            Nearby Futures.csv   4746     7     0.43 2019-09-23 to 2025-12-09  1.0%                                  None
+        Pork Primal Values.csv  29520    13     4.15 2013-01-07 to 2025-12-09  0.0%                                  None
+           Pork Production.csv    829     4     0.03 2010-01-02 to 2025-12-06  0.0%                                  None
+               SOW Harvest.csv   1194    12     0.09 2003-01-04 to 2025-11-17 59.3%                                  type
+                     Sales.csv   6206    17     0.73 1999-01-07 to 2025-10-30  5.7%                                  None
+                     WASDE.csv  20356    21     5.64 2025-08-01 to 2025-12-01  7.4%                                  None
+            Weekly Harvest.csv   4154    10     0.45 2007-01-06 to 2025-11-17 10.0%                                  None
+              Western Colt.csv  29940    18     9.22 2001-04-17 to 2020-12-31  7.8%                                  None
+          Western Cornbelt.csv   1582     7     0.15 2019-09-23 to 2025-12-09  1.0%                                  None
+                lookup_CME.csv  13049     7     0.91 1970-01-01 to 1970-01-01  0.0%                                  None
+
+============================================================
+§2  CASH CATTLE DEEP DIVE
+============================================================
+Cash Cattle: 133,140 rows, 7 columns
+Date range: 2019-11-13 to 2025-12-09
+Selling bases: ['DRESSED FOB', 'DRESSED DELIVERED', 'LIVE FOB', 'LIVE DELIVERED']
+Grade descriptions: ['65 - 80% Choice', '35 - 65% Choice', 'Total all grades', ' 0 - 35% Choice', 'Over 80% Choice']
+                Year    IndexbyYear                    report_date  weighted_avg_price
+count  133140.000000  133140.000000                         133140       133140.000000
+mean     2022.397476     177.975665  2022-11-26 00:00:00.000000256          202.628263
+min      2019.000000       1.000000            2019-11-13 00:00:00           90.000000
+25%      2021.000000      85.000000            2021-05-20 00:00:00          155.955000
+50%      2022.000000     177.000000            2022-11-26 00:00:00          190.000000
+75%      2024.000000     270.000000            2024-06-03 00:00:00          242.282500
+max      2025.000000     366.000000            2025-12-09 00:00:00          393.120000
+std         1.755116     105.950939                            NaN           65.818779
+[SAVED] 01_cash_cattle_price_volatility.png
+[SAVED] 02_cash_cattle_distribution.png
+
+=== ANALYST NOTES ===
+Price range: $140.18 to $280.76
+Mean: $202.63, Median: $201.32
+Skewness: 0.161
+Max volatility period: 2025-12-09 00:00:00
+
+============================================================
+§3  CUTOUT (CHOICE vs SELECT) ANALYSIS
+============================================================
+Spread stats: mean=$11.68, std=$7.49
+[SAVED] 03_cutout_choice_select.png
+
+============================================================
+§4  NEARBY FUTURES ANALYSIS
+============================================================
+[SAVED] 04_nearby_futures.png
+Regions: ['Western Cornbelt', 'IASWMN', 'National']
+Purchase type: ['Negotiated (carcass basis)']
+Price range: $28.32 to $133.97
+
+============================================================
+§5  PRODUCTION & HARVEST DATA
+============================================================
+[SAVED] 05_production_harvest.png
+
+============================================================
+§6  FUTURES CONTRACT CURVES
+============================================================
+[SAVED] 06_futures_contract_curves.png
+
+============================================================
+§7  CROSS-MARKET CORRELATION ANALYSIS
+============================================================
+Merged: 2,219 rows × 25 columns
+[SAVED] 07_correlation_heatmap.png
+
+============================================================
+§8  FRED MACROECONOMIC INDICATORS
+============================================================
+✅ Corn PPI: latest=507.4040 (2026-04-01)
+✅ WTI Oil: latest=101.5600 (2026-05-11)
+✅ Fed Funds: latest=3.6400 (2026-04-01)
+✅ CPI: latest=332.4070 (2026-04-01)
+✅ USD Index: latest=119.2825 (2026-05-15)
+[SAVED] 08_fred_macro_indicators.png
+
+============================================================
+§9  XGBOOST MODEL — FULL DIAGNOSTICS
+============================================================
+Feature matrix: 2189 rows × 37 features
+Target: weighted_avg_price (Cash Cattle)
+[SAVED] 09_cv_folds.png
+
+=== CV RESULTS ===
+ Fold       MAE        R2      MAPE  Train Size  Test Size  Test Mean  Test Std
+    1  3.706337  0.701091  2.177714         369        364 163.837810  8.960069
+    2 12.073183 -5.120169  6.302535         733        364 189.520687  5.311421
+    3 26.094907 -7.052329 11.627092        1097        364 220.624168  9.990952
+    4  2.538854  0.624248  1.087758        1461        364 229.899692  6.128780
+    5 21.549015 -2.444048  8.019903        1825        364 260.901014 13.648650
+
+Mean MAE: 13.1925 ± 10.5005
+Mean R²:  -2.6582 ± 3.4451
+Mean MAPE: 5.84% ± 4.31%
+
+Test MAE:  17.9114
+Test MAPE: 6.67%
+Test R²:   -0.9733
+[SAVED] 10_model_importance_and_test.png
+
+============================================================
+§10  RESIDUAL ANALYSIS
+============================================================
+[SAVED] 11_residual_analysis.png
+Mean residual: 17.7583 (should be ~0)
+Std residual:  14.6604
+Skewness: 0.1123
+Max overpredict: $23.73
+Max underpredict: $40.51
+
+⚠️ Model UNDERESTIMATES (mean residual = 17.76)
+
+============================================================
+§11  IMPROVED MODEL — BASELINE vs FIXED
+============================================================
+Fixes applied:
+  1. Sanitize data leakage columns (IndexbyYear, RankbyAttribute, redundant futures)
+  2. Predict returns (pct_change) instead of price levels
+  3. Add trend-aware features (Bollinger, SMA position, longer momentum, cyclical dates)
+  4. Regularized XGBoost (L1, L2, subsample, colsample)
+Dropped 16 leakage/redundant columns: ['IndexbyYear (Cash Cattle)', 'avg (Nearby Futures)', 'Year (Carcass Weights)', 'IndexbyYear (Carcass Weights)', 'Year (Weekly Harvest)', 'Year (Nearby Futures)', 'Week of Year (Cutout (Select_Choice))', 'RankbyAttribute (Cutout (Select_Choice))', 'Year (Beef Production)', 'IndexbyYear (Cutout (Select_Choice))', 'Year (Cutout (Select_Choice))', 'wtd_avg (Nearby Futures)', 'IndexbyYear (Weekly Harvest)', 'CommodityRowCountCutout (Cutout (Select_Choice))', 'Year (Cash Cattle)', 'IndexbyYear (Beef Production)']
+Improved feature matrix: 2169 rows × 21 features
+[SAVED] 12_improved_cv_folds.png
+
+=== IMPROVED CV RESULTS ===
+ Fold      MAE       R2     MAPE   Dir_Acc
+    1 0.050700 0.999883 0.030392 77.222222
+    2 0.039145 0.999888 0.020623 80.833333
+    3 0.058723 0.999714 0.026435 78.333333
+    4 0.041758 0.999846 0.018082 78.888889
+    5 0.201392 0.984734 0.084583 77.222222
+
+Mean MAE: 0.0783 ± 0.0692
+Mean R²:  0.9968 ± 0.0068
+Mean Dir Acc: 78.5%
+
+Improved Test MAE:  0.1740
+Improved Test R²:   0.9913
+Improved Test MAPE: 0.07%
+Improved Mean Resid: -0.0639
+[SAVED] 13_improved_model_importance_and_test.png
+[SAVED] 14_improved_residual_analysis.png
+
+============================================================
+§12  BASELINE vs IMPROVED — COMPARISON
+============================================================
+           Metric Baseline Improved
+     Test MAE ($)    17.91     0.17
+          Test R²  -0.9733   0.9913
+    Test MAPE (%)     6.67     0.07
+Mean Residual ($)    17.76    -0.06
+  Mean CV MAE ($)    13.19     0.08
+       Mean CV R²  -2.6582   0.9968
+
+✅ IMPROVED MODEL IS BETTER
