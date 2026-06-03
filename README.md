@@ -94,6 +94,5 @@ streamlit run app.py
 
 The application opens in your default browser at `http://localhost:8501`.
 
-## Author
-
-Jacob VonTersch. Syracuse University, CCDS Pro-Ag Data Science Competition, 2026.
+## Team
+Built by Lauren Gracias, Ryan Peters, and Jacob VonTersch (Syracuse University) for the CCDS Pro-Ag Data Science Competition, 2026.
